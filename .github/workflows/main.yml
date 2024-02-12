@@ -34,4 +34,4 @@ jobs:
       with:
         name: executable-${{ matrix.os }}
         path: |
-          dist*
+          app*
