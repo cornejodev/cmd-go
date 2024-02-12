@@ -24,7 +24,7 @@ jobs:
         
     - name: Build Executable
       run: |
-        go build -o scraper${{ matrix.os == 'windows-latest' && '.exe' || '' }} main.go
+        go build -o app${{ matrix.os == 'windows-latest' && '.exe' || '' }} main.go
       env:
         GOOS: ${{ matrix.os == 'windows-latest' && 'windows' || matrix.os == 'ubuntu-latest' && 'linux' || 'darwin' }}
         GOARCH: amd64 # Adjust as necessary
